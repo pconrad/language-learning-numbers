@@ -39,8 +39,34 @@ from language_learning_numbers import limit
 
 for i in range(limit('Spanish')):
    print "The Spanish word for ",i," is ",val('Spanish',i)
+
+
    
 ```
 
+
 * `languages_supported()` returns a list of strings with the supported languages
 * `limit(language)` returns an integer, one more than the highest number available in the language.  The integers from zero up to that limit minus one are available.
+
+
+If you just access val in the REPL, you will get escape sequences for
+unicode characters.  To see the representation, you will need to use 
+print.  Example:
+
+```
+>>> import language_learning_numbers as l
+>>> l.val('Mandarin-Pinyin',2)
+u'\xe8r'
+>>> print (l.val('Mandarin-Pinyin',2))
+èr
+>>> 
+```
+
+If Unicode characters are not showing up properly, you may also need
+to set an environment variable before running the program:
+
+```
+export PYTHONIOENCODING=utf-8
+```
+
+See: http://stackoverflow.com/questions/1473577/writing-unicode-strings-via-sys-stdout-in-python
