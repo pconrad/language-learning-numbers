@@ -9,7 +9,8 @@ numbers = {
                'diez'], 
     'Mandarin-Pinyin':[u'líng',u'yī',u'èr',u'sān',u'sì',
                       u'wǔ',u'liù',u'qī',u'bā',u'jiǔ',
-                      u'shí']
+                      u'shí'],
+    'Mandarin-Traditional':[u'零']
 }
 
 def languages_supported():
@@ -17,7 +18,7 @@ def languages_supported():
 
 
 def limit(language):
-    return len(numbers[keys])
+    return len(numbers[language])
 
 
 def val(language,number):
