@@ -13,6 +13,18 @@ numbers = {
     'Mandarin-Traditional':[u'零']
 }
 
+bodyParts = {
+    'Spanish':{'arm':'el brazo','hand':'la mano'}
+    }
+
+dictDict = {
+    'Spanish':{0: 'cero', 1:'uno', 2:'dos',100:'cien'}, 
+    'Mandarin-Pinyin':[u'líng',u'yī',u'èr',u'sān',u'sì',
+                      u'wǔ',u'liù',u'qī',u'bā',u'jiǔ',
+                      u'shí'],
+    'Mandarin-Traditional':[u'零']
+}
+
 def languages_supported():
     return numbers.keys()
 
